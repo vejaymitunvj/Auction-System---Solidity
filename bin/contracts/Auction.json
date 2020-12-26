@@ -1,0 +1,509 @@
+{
+    "contractName": "Auction",
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "inputs": [],
+            "name": "auctionEnd",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "beneficiary",
+            "outputs": [
+                {
+                    "internalType": "address payable",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "bid",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "highestBid",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "highestBidder",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "withdraw",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"auctionEnd\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"beneficiary\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bid\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"highestBid\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"highestBidder\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{\"auctionEnd()\":{\"notice\":\"End the auction and send the highest bid to the beneficiary.\"},\"bid()\":{\"notice\":\"Bid on the auction with the value sent together with this transaction. The value will only be refunded if the auction is not won.\"},\"withdraw()\":{\"notice\":\"Withdraw a bid that was overbid.\"}}}},\"settings\":{\"compilationTarget\":{\"c:/Users/prasi/OneDrive/Desktop/Vejay/Spring 2020/BlockChain/hw/HW1/hw1-source/hw1-source/contracts/Auction.sol\":\"Auction\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/prasi/OneDrive/Desktop/Vejay/Spring 2020/BlockChain/hw/HW1/hw1-source/hw1-source/contracts/Auction.sol\":{\"keccak256\":\"0xb86d2fdd7819d102b93dc88e29884e6485bc33c366eedc59ae518d7692d5c65b\",\"urls\":[\"bzz-raw://a8f775e7ea5410e6c1fe5a32d9b62ac328c72f7013c3f334c58f5735c723ca15\",\"dweb:/ipfs/QmUnU8qHuV5TTSoyYqmnRUPMEBTFmBhiAjqyqLy1j1NFcz\"]}},\"version\":1}",
+    "bytecode": "608060405234801561001057600080fd5b50600080546001600160a01b03191633179055610170806100326000396000f3fe6080604052600436106100555760003560e01c80631998aeef1461005a5780632a24f46c1461006457806338af3eed146100795780633ccfd60b146100aa57806391f90157146100d3578063d57bde79146100e8575b600080fd5b61006261010f565b005b34801561007057600080fd5b5061006261010f565b34801561008557600080fd5b5061008e610111565b604080516001600160a01b039092168252519081900360200190f35b3480156100b657600080fd5b506100bf610120565b604080519115158252519081900360200190f35b3480156100df57600080fd5b5061008e610125565b3480156100f457600080fd5b506100fd610134565b60408051918252519081900360200190f35b565b6000546001600160a01b031681565b600090565b6001546001600160a01b031681565b6002548156fea26469706673582212207dd97be89ba991432b614c471be965d6d3ec1b2838e219056b468c33468f461864736f6c63430006010033",
+    "deployedBytecode": "6080604052600436106100555760003560e01c80631998aeef1461005a5780632a24f46c1461006457806338af3eed146100795780633ccfd60b146100aa57806391f90157146100d3578063d57bde79146100e8575b600080fd5b61006261010f565b005b34801561007057600080fd5b5061006261010f565b34801561008557600080fd5b5061008e610111565b604080516001600160a01b039092168252519081900360200190f35b3480156100b657600080fd5b506100bf610120565b604080519115158252519081900360200190f35b3480156100df57600080fd5b5061008e610125565b3480156100f457600080fd5b506100fd610134565b60408051918252519081900360200190f35b565b6000546001600160a01b031681565b600090565b6001546001600160a01b031681565b6002548156fea26469706673582212207dd97be89ba991432b614c471be965d6d3ec1b2838e219056b468c33468f461864736f6c63430006010033",
+    "sourceMap": "25:1958:0:-:0;;;338:62;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;369:11:0;:24;;-1:-1:-1;;;;;;369:24:0;383:10;369:24;;;25:1958;;;;;;",
+    "deployedSourceMap": "25:1958:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;568:818;;;:::i;:::-;;1719:262;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1719:262:0;;;:::i;48:34::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;48:34:0;;;:::i;:::-;;;;-1:-1:-1;;;;;48:34:0;;;;;;;;;;;;;;1433:203;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1433:203:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;166:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;166:28:0;;;:::i;200:22::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;200:22:0;;;:::i;:::-;;;;;;;;;;;;;;;;568:818;:::o;48:34::-;;;-1:-1:-1;;;;;48:34:0;;:::o;1433:203::-;1469:4;1433:203;:::o;166:28::-;;;-1:-1:-1;;;;;166:28:0;;:::o;200:22::-;;;;:::o",
+    "sourcePath": "c:/Users/prasi/OneDrive/Desktop/Vejay/Spring 2020/BlockChain/hw/HW1/hw1-source/hw1-source/contracts/Auction.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.6.1+commit.e6f7d5a4"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/prasi/OneDrive/Desktop/Vejay/Spring 2020/BlockChain/hw/HW1/hw1-source/hw1-source/contracts/Auction.sol",
+        "exportedSymbols": {
+            "Auction": [
+                35
+            ]
+        },
+        "id": 36,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    ">",
+                    "0.5",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:23:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "documentation": null,
+                "fullyImplemented": true,
+                "id": 35,
+                "linearizedBaseContracts": [
+                    35
+                ],
+                "name": "Auction",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "functionSelector": "38af3eed",
+                        "id": 3,
+                        "name": "beneficiary",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 35,
+                        "src": "48:34:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                        },
+                        "typeName": {
+                            "id": 2,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "48:15:0",
+                            "stateMutability": "payable",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                            }
+                        },
+                        "value": null,
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "91f90157",
+                        "id": 5,
+                        "name": "highestBidder",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 35,
+                        "src": "166:28:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                        },
+                        "typeName": {
+                            "id": 4,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "166:7:0",
+                            "stateMutability": "nonpayable",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                            }
+                        },
+                        "value": null,
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "d57bde79",
+                        "id": 7,
+                        "name": "highestBid",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 35,
+                        "src": "200:22:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 6,
+                            "name": "uint",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "200:4:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": null,
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "id": 11,
+                        "name": "pendingReturns",
+                        "nodeType": "VariableDeclaration",
+                        "overrides": null,
+                        "scope": 35,
+                        "src": "273:39:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                            "typeString": "mapping(address => uint256)"
+                        },
+                        "typeName": {
+                            "id": 10,
+                            "keyType": {
+                                "id": 8,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "281:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "273:24:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                "typeString": "mapping(address => uint256)"
+                            },
+                            "valueType": {
+                                "id": 9,
+                                "name": "uint",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "292:4:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                }
+                            }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 19,
+                            "nodeType": "Block",
+                            "src": "359:41:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "argumentTypes": null,
+                                        "id": 17,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "argumentTypes": null,
+                                            "id": 14,
+                                            "name": "beneficiary",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 3,
+                                            "src": "369:11:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address_payable",
+                                                "typeString": "address payable"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "argumentTypes": null,
+                                            "expression": {
+                                                "argumentTypes": null,
+                                                "id": 15,
+                                                "name": "msg",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 87,
+                                                "src": "383:3:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_magic_message",
+                                                    "typeString": "msg"
+                                                }
+                                            },
+                                            "id": 16,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "sender",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": null,
+                                            "src": "383:10:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address_payable",
+                                                "typeString": "address payable"
+                                            }
+                                        },
+                                        "src": "369:24:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address_payable",
+                                            "typeString": "address payable"
+                                        }
+                                    },
+                                    "id": 18,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "369:24:0"
+                                }
+                            ]
+                        },
+                        "documentation": null,
+                        "id": 20,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nodeType": "FunctionDefinition",
+                        "overrides": null,
+                        "parameters": {
+                            "id": 12,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "349:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 13,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "359:0:0"
+                        },
+                        "scope": 35,
+                        "src": "338:62:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 23,
+                            "nodeType": "Block",
+                            "src": "598:788:0",
+                            "statements": []
+                        },
+                        "documentation": "Bid on the auction with the value sent\n together with this transaction.\n The value will only be refunded if the\n auction is not won.",
+                        "functionSelector": "1998aeef",
+                        "id": 24,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "bid",
+                        "nodeType": "FunctionDefinition",
+                        "overrides": null,
+                        "parameters": {
+                            "id": 21,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "580:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 22,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "598:0:0"
+                        },
+                        "scope": 35,
+                        "src": "568:818:0",
+                        "stateMutability": "payable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 29,
+                            "nodeType": "Block",
+                            "src": "1475:161:0",
+                            "statements": []
+                        },
+                        "documentation": "Withdraw a bid that was overbid.",
+                        "functionSelector": "3ccfd60b",
+                        "id": 30,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "withdraw",
+                        "nodeType": "FunctionDefinition",
+                        "overrides": null,
+                        "parameters": {
+                            "id": 25,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1450:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 28,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 27,
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "overrides": null,
+                                    "scope": 30,
+                                    "src": "1469:4:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    },
+                                    "typeName": {
+                                        "id": 26,
+                                        "name": "bool",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1469:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "value": null,
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1468:6:0"
+                        },
+                        "scope": 35,
+                        "src": "1433:203:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 33,
+                            "nodeType": "Block",
+                            "src": "1748:233:0",
+                            "statements": []
+                        },
+                        "documentation": "End the auction and send the highest bid\n to the beneficiary.",
+                        "functionSelector": "2a24f46c",
+                        "id": 34,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "auctionEnd",
+                        "nodeType": "FunctionDefinition",
+                        "overrides": null,
+                        "parameters": {
+                            "id": 31,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1738:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 32,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1748:0:0"
+                        },
+                        "scope": 35,
+                        "src": "1719:262:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 36,
+                "src": "25:1958:0"
+            }
+        ],
+        "src": "0:1983:0"
+    },
+    "functionHashes": {
+        "auctionEnd()": "2a24f46c",
+        "beneficiary()": "38af3eed",
+        "bid()": "1998aeef",
+        "highestBid()": "d57bde79",
+        "highestBidder()": "91f90157",
+        "withdraw()": "3ccfd60b"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "73600",
+            "executionCost": "20958",
+            "totalCost": "94558"
+        },
+        "external": {
+            "auctionEnd()": "144",
+            "beneficiary()": "1059",
+            "bid()": "98",
+            "highestBid()": "1086",
+            "highestBidder()": "1103",
+            "withdraw()": "248"
+        }
+    }
+}
